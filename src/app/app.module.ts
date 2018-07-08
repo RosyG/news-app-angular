@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http, Response } from '@angular/http';
-// import {Observable} from "rxjs";
-
+import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders} from './app.routing';
-/* import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatButtonToggleModule, MatIconModule } from '@angular/material';*/
+/* import { MatButtonModule,
+   MatCardModule, MatMenuModule, MatToolbarModule, MatButtonToggleModule, MatIconModule } from '@angular/material';*/
 // Http,
 // FormsModule
 // HttpModule,
@@ -33,9 +32,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     routing,
     FormsModule,
-    HttpModule,
-    Http, Response
-
+    HttpModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

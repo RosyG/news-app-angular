@@ -8,7 +8,6 @@ import { ApiService } from '../api.service';
   providers: [ApiService]
 })
 export class HackerNewsComponent {
-  // private  contacts:  Array<object> = [];
   public news;
   errorMessage: any;
   constructor(private  apiService:  ApiService) {
