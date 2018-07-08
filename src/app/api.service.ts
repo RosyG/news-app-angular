@@ -10,4 +10,8 @@ export class ApiService {
     return  this.http.get('http://node-hnapi.herokuapp.com/news')
               .map(res => res.json());
   }
+  getBitcoin(startDate, endDate) {
+    return this.http.get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${startDate}&end=${endDate}`);
+  }
+
 }

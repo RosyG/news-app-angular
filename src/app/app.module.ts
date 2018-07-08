@@ -19,6 +19,8 @@ import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { TodosComponent } from './todos/todos.component';
 import { BitcoinPricesComponent } from './bitcoin-prices/bitcoin-prices.component';
 import { HomeComponent } from './home/home.component';
+import { DatePipe } from './pipes/date.pipes';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     HackerNewsComponent,
     TodosComponent,
     BitcoinPricesComponent,
-    HomeComponent
+    HomeComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,

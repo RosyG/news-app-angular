@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bitcoin-prices.component.css']
 })
 export class BitcoinPricesComponent implements OnInit {
+  public newDate;
 
-  constructor() { }
+  constructor() {
+    this.newDate = new Date(2017, 4, 12);
+  }
 
   ngOnInit() {
   }
