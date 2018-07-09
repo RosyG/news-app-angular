@@ -2,11 +2,12 @@
     todos works!
   </p>
   <input [(ngModel)]="task"  required>
-  <input type="datetime-local" [(ngModel)]="fecha">
+  <!-- <input type="datetime-local" [(ngModel)]="fecha"> -->
   <button (click)="addTask()">Set value</button>
 
-  <div>
-      <li ng-repeat="let item in todoList">
-        {{item}}
-      </li>
-  </div>
+  <ol *ngFor="let item of listAllTask">
+      <p>
+        {{item.task}}
+        <span>{{item.date | date: 'yyyy-MM-dd HH:MM'}}</span>
+      </p>
+  </ol>

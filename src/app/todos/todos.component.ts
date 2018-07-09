@@ -6,15 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
-  fecha = '';
+  fecha = new Date();
   task = '';
   newTask = {};
   todoList = [];
+  listAllTask;
   addTask() {
     this.newTask = { 'task': this.task, 'date': this.fecha};
     this.todoList.push(this.newTask);
-    console.log(this.todoList);
-   }
+    localStorage.allTask = JSON.stringify(this.todoList);
+    this.drawnList();
+  }
+
+  drawnList = () => {
+    this.listAllTask = JSON.parse(localStorage.allTask);
+  }
+
   constructor() { }
 
   ngOnInit() {
