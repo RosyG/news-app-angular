@@ -1,4 +1,12 @@
-<p>
-  todos works!
-</p>
+  <p>
+    todos works!
+  </p>
+  <input [(ngModel)]="task"  required>
+  <input type="datetime-local" [(ngModel)]="fecha">
+  <button (click)="addTask()">Set value</button>
 
+  <div>
+      <li ng-repeat="let item in todoList">
+        {{item}}
+      </li>
+  </div>
