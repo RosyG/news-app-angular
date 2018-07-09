@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class TodosComponent implements OnInit {
   fecha = new Date();
   task = '';
-  checkbox = '';
+  checked = false;
   newTask = {};
   todoList = [];
   listAllTask;
   addTask() {
-    this.newTask = { 'task': this.task, 'date': this.fecha, 'check': this.checkbox};
+    this.newTask = { 'task': this.task, 'date': this.fecha, 'checkbox': this.checked};
+
     this.todoList.push(this.newTask);
     localStorage.allTask = JSON.stringify(this.todoList);
     this.drawnList();

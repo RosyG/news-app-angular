@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders} from './app.routing';
 import { ChartsModule } from 'ng2-charts';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 /* import { MatButtonModule,
    MatCardModule, MatMenuModule, MatToolbarModule, MatButtonToggleModule, MatIconModule } from '@angular/material';*/
 // Http,
@@ -38,7 +38,8 @@ import { DatePipe } from './pipes/date.pipes';
     routing,
     FormsModule,
     HttpModule,
-    ChartsModule
+    ChartsModule,
+    MatCheckboxModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
