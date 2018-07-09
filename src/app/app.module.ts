@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders} from './app.routing';
+import { ChartsModule } from 'ng2-charts';
+
 /* import { MatButtonModule,
    MatCardModule, MatMenuModule, MatToolbarModule, MatButtonToggleModule, MatIconModule } from '@angular/material';*/
 // Http,
@@ -35,7 +37,8 @@ import { DatePipe } from './pipes/date.pipes';
     BrowserModule,
     routing,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ChartsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

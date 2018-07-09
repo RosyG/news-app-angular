@@ -11,7 +11,9 @@ export class ApiService {
               .map(res => res.json());
   }
   getBitcoin(startDate, endDate) {
-    return this.http.get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${startDate}&end=${endDate}`);
+    const auxCorps = 'https://cors-anywhere.herokuapp.com/';
+    return this.http
+      .get(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${startDate}&end=${endDate}`);
   }
 
 }
