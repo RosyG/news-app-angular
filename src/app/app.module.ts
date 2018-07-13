@@ -3,8 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders} from './app.routing';
+/*Styles*/
 import { ChartsModule } from 'ng2-charts';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 /* import { MatButtonModule,
    MatCardModule, MatMenuModule, MatToolbarModule, MatButtonToggleModule, MatIconModule } from '@angular/material';*/
 // Http,
@@ -38,7 +43,12 @@ import { DatePipe } from './pipes/date.pipes';
     routing,
     FormsModule,
     HttpModule,
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

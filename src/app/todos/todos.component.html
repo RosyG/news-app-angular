@@ -3,13 +3,14 @@
   </p>
   <input [(ngModel)]="task"  required>
   <!-- <input type="datetime-local" [(ngModel)]="fecha"> -->
-  <button (click)="addTask()">Set value</button>
+  <button type="submit" (click)="addTask()">Set value</button>
 
-  <div class="item-toDo" *ngFor="let item of listAllTask">
-      <input [(ngModel)]="checkbox" type="checkbox" (click)="taskStyles()">
+  <div class="item-toDo" *ngFor="let item of listAllTask; let i = index">
+      <input id="{{i}}" type="checkbox" (click)="taskStyles()">
       <p>
         {{item.task}}
         <span>{{item.date | date: 'yyyy-MM-dd HH:MM'}}</span>
       </p>
-      <button>x</button>
+      <button mat-button color="accent">x</button>
+
   </div>
