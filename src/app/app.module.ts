@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders} from './app.routing';
+
 /*Styles*/
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -47,6 +48,7 @@ import { DatePipe } from './pipes/date.pipes';
     BrowserModule,
     routing,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     ChartsModule,
     BrowserAnimationsModule,
