@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-todos',
@@ -12,6 +13,7 @@ export class TodosComponent implements OnInit {
   newTask = {};
   todoList = [];
   listAllTask;
+  todoForm: FormGroup;
   addTask() {
     this.newTask = { 'task': this.task, 'date': this.fecha, 'check': this.checkbox};
     this.todoList.push(this.newTask);
@@ -50,9 +52,22 @@ export class TodosComponent implements OnInit {
 
   }
 
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    console.log(filterValue);
+
+  }
   constructor() { }
 
   ngOnInit() {
-    this.drawnList();
+    if ( this.todoList !== [] ) {
+      this.drawnList();
+    }
+
+    this.todoForm = new FormGroup({
+      'name': new FormControl(null, [Validators.required])
+    }, { updateOn: 'blur' });
+
   }
 }

@@ -14,3 +14,40 @@
       <button mat-button color="accent">x</button>
 
   </div>
+<!--
+  <form class="form" [formGroup]="todoForm">
+    <div class="col-md-6">
+      <div class="form-group row">
+        <label class="col-md-4 label-control" for="name"> {{'orders.info_client_name' | translate}} </label>
+        <div class="col-md-8 position-relative has-icon-left">
+          <input type="text" class="form-control border-primary" id="name" formControlName="name" name="name" maxlength="45" required>
+          <small class="form-text text-muted danger" *ngIf="!todoForm.get('name').valid && (dataClientForm.get('name').dirty || dataClientForm.get('name').touched)">{{'v_required' | translate}}</small>
+          <div class="form-control-position">
+            <i class="fa fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h1>kkr</h1>
+    <input type="text" (keyup)="applyFilter($event.target.value)" placeholder="Task Here!">
+
+  </form> -->
+
+
+  <!-- <div class="row">
+    <div class="col-12">
+      <div class="list-group list-group-messages" *ngFor="let item of listStatus; let i = index">
+        <a class="list-group-item list-group-item-action no-border" [ngClass]="{'active': item.active }" (click)="deselect(listStatus, item)">
+          <i class="fa fa-location-arrow mr-1"></i> {{item.name}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-12">
+      <textarea class="form-control border-primary" name="comment" rows="4" style="width: 100%" placeholder="Comentario" [(ngModel)]="comment"></textarea>
+    </div>
+  </div> -->
